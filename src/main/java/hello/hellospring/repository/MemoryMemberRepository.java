@@ -1,9 +1,10 @@
 package hello.hellospring.repository;
 
 import hello.hellospring.domain.Member;
+import org.springframework.stereotype.Repository;
 
 import java.util.*;
-
+@Repository
 public class MemoryMemberRepository implements MemberRepository{  //Option + Enter 하면 MemberRepository 에 있는 메서드를 전부 가져올 수 있음
     private static Map<Long, Member> store = new HashMap<>();
     private static long sequence = 0L; //키값을 생성해주는 녀석
